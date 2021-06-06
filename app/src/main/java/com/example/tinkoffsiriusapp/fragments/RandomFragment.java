@@ -125,7 +125,7 @@ public class RandomFragment extends BasicFragment implements Clickable {
         subtitle = view.findViewById(R.id.rnd_author);
         ProgressBar loadProgress = view.findViewById(R.id.rnd_progressbar);
 
-        btnPrev = Objects.requireNonNull(getActivity()).findViewById(R.id.btn_previous);
+        btnPrev = requireActivity().findViewById(R.id.btn_previous);
         btnNex = getActivity().findViewById(R.id.btn_next);
 
         btnPrev.setOnClickListener(onPrevClickListener);
@@ -206,7 +206,7 @@ public class RandomFragment extends BasicFragment implements Clickable {
         randomFragmentViewModel.setIsCurrentGifLoaded(false);
         randomFragmentViewModel.setCanLoadNext(false);
 
-        Glide.with(Objects.requireNonNull(getActivity()))
+        Glide.with(requireActivity())
                 .asGif()
                 .load(url)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
