@@ -1,7 +1,7 @@
-package com.example.tinkoffsiriusapp.api;
+package com.gladkikh.tinkoffsiriusapp.api;
 
-import com.example.tinkoffsiriusapp.models.Gif;
-import com.example.tinkoffsiriusapp.models.Gifs;
+import com.gladkikh.tinkoffsiriusapp.models.Gif;
+import com.gladkikh.tinkoffsiriusapp.models.Gifs;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

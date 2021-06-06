@@ -27,7 +27,7 @@
             app:titleEnabled="true">
 
 
-            <com.example.tinkoffsiriusapp.graphics.MyCompatTextView
+            <com.gladkikh.tinkoffsiriusapp.graphics.MyCompatTextView
                 android:layout_width="352dp"
                 android:layout_height="wrap_content"
                 android:text="@string/collapsing_toolbar_title"

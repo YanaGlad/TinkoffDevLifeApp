@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.api;
+package com.gladkikh.tinkoffsiriusapp.api;
 
 import com.google.gson.GsonBuilder;
 

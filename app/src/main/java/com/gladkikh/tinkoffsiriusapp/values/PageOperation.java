@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.values;
+package com.gladkikh.tinkoffsiriusapp.values;
 
 public enum PageOperation {
     STAND,

@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.fragments;
+package com.gladkikh.tinkoffsiriusapp.fragments;
 
 public interface Clickable {
     boolean nextEnabled();

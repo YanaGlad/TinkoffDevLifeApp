@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.adapters;
+package com.gladkikh.tinkoffsiriusapp.adapters;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -19,9 +19,9 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.tinkoffsiriusapp.R;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
-import com.example.tinkoffsiriusapp.viewmodel.GifViewModel;
+import com.gladkikh.tinkoffsiriusapp.R;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.viewmodel.GifViewModel;
 
 
 public class GifViewHolder extends RecyclerView.ViewHolder {

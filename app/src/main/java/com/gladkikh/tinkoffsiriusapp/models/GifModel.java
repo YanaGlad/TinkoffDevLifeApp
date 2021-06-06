@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.models;
+package com.gladkikh.tinkoffsiriusapp.models;
 
 
 public class GifModel {

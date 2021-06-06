@@ -1,8 +1,8 @@
-package com.example.tinkoffsiriusapp.viewmodel;
+package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
 
 
 public class GifViewModel extends ViewModel {

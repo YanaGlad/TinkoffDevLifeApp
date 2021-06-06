@@ -40,7 +40,7 @@
 
             android:visibility="invisible" />
 
-        <com.example.tinkoffsiriusapp.graphics.MyCompatTextView
+        <com.gladkikh.tinkoffsiriusapp.graphics.MyCompatTextView
             android:id="@+id/recycl_error_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

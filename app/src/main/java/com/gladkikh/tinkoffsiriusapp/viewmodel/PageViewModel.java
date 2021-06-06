@@ -1,10 +1,7 @@
-package com.example.tinkoffsiriusapp.viewmodel;
+package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
-
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 public class PageViewModel extends ViewModel {
     private MutableLiveData<Boolean> canLoadPrevious = new MutableLiveData<>(false);

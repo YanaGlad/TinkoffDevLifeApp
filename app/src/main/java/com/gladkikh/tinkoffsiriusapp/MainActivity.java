@@ -1,11 +1,11 @@
-package com.example.tinkoffsiriusapp;
+package com.gladkikh.tinkoffsiriusapp;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.tinkoffsiriusapp.adapters.MyPagerAdapter;
+import com.gladkikh.tinkoffsiriusapp.adapters.MyPagerAdapter;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 

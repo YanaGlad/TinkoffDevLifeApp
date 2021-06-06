@@ -1,11 +1,11 @@
-package com.example.tinkoffsiriusapp.viewmodel;
+package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
 import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import com.example.tinkoffsiriusapp.models.GifModel;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.models.GifModel;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
 
 import java.util.ArrayList;
 import java.util.List;

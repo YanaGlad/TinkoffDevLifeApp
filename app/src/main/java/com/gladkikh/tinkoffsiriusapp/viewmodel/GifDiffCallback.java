@@ -1,9 +1,9 @@
-package com.example.tinkoffsiriusapp.viewmodel;
+package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 
-import com.example.tinkoffsiriusapp.models.Gif;
+import com.gladkikh.tinkoffsiriusapp.models.Gif;
 
 
 class GifDiffCallback extends DiffUtil.ItemCallback<Gif> {

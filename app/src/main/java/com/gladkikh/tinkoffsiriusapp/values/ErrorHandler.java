@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.values;
+package com.gladkikh.tinkoffsiriusapp.values;
 
 public class ErrorHandler {
     private static String[] type_error = {

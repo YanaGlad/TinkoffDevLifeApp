@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.fragments;
+package com.gladkikh.tinkoffsiriusapp.fragments;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,16 +15,14 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tinkoffsiriusapp.R;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
-import com.example.tinkoffsiriusapp.values.PageOperation;
-import com.example.tinkoffsiriusapp.adapters.GifsRecyclerAdapter;
-import com.example.tinkoffsiriusapp.viewmodel.RecyclerFragmentViewModel;
-
-import java.util.Objects;
+import com.gladkikh.tinkoffsiriusapp.R;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.values.PageOperation;
+import com.gladkikh.tinkoffsiriusapp.adapters.GifsRecyclerAdapter;
+import com.gladkikh.tinkoffsiriusapp.viewmodel.RecyclerFragmentViewModel;
 
 
-public class MainFragment extends BasicFragment implements Clickable {
+public class MainFragment extends ButtonSupportedFragment implements Clickable {
 
     private boolean isOnScreen = false;
     private String type;
@@ -38,15 +36,13 @@ public class MainFragment extends BasicFragment implements Clickable {
         isOnScreen = onScreen;
     }
 
-    private static final String TYPE_TAG = "TAB_TYPE";
-
     private RecyclerFragmentViewModel recyclerFragmentViewModel;
     private GifsRecyclerAdapter gifsRecyclerAdapter;
 
     public static MainFragment newInstance(String type) {
         MainFragment fragment = new MainFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(TYPE_TAG, type);
+        bundle.putString("TAB_TYPE", type);
         fragment.setArguments(bundle);
         return fragment;
     }
@@ -56,7 +52,7 @@ public class MainFragment extends BasicFragment implements Clickable {
         super.onCreate(savedInstanceState);
         recyclerFragmentViewModel = new ViewModelProvider(this).get(RecyclerFragmentViewModel.class);
         if (getArguments() != null) {
-            type = getArguments().getString(TYPE_TAG);
+            type = getArguments().getString("TAB_TYPE");
             recyclerFragmentViewModel.setType(type);
         }else {
             Log.e("TAG_MAIN_FRAG", "No arguments in bundle");
@@ -78,7 +74,7 @@ public class MainFragment extends BasicFragment implements Clickable {
         ProgressBar errorProgressBar = view.findViewById(R.id.recycle_error_progressbar);
         Button errorButton = view.findViewById(R.id.recycl_error_btn);
 
-        btnPrev = Objects.requireNonNull(getActivity()).findViewById(R.id.btn_previous);
+        btnPrev = requireActivity().findViewById(R.id.btn_previous);
         btnNex = getActivity().findViewById(R.id.btn_next);
 
         recyclerView.setHasFixedSize(true);

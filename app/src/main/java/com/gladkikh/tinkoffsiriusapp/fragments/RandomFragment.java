@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.fragments;
+package com.gladkikh.tinkoffsiriusapp.fragments;
 
 import android.content.Context;
 import android.content.res.AssetManager;
@@ -24,12 +24,12 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.load.resource.gif.GifDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.tinkoffsiriusapp.R;
-import com.example.tinkoffsiriusapp.api.Api;
-import com.example.tinkoffsiriusapp.api.Instance;
-import com.example.tinkoffsiriusapp.models.Gif;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
-import com.example.tinkoffsiriusapp.viewmodel.RandomFragmentViewModel;
+import com.gladkikh.tinkoffsiriusapp.R;
+import com.gladkikh.tinkoffsiriusapp.api.Api;
+import com.gladkikh.tinkoffsiriusapp.api.Instance;
+import com.gladkikh.tinkoffsiriusapp.models.Gif;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.viewmodel.RandomFragmentViewModel;
 
 import java.util.Objects;
 
@@ -39,7 +39,7 @@ import retrofit2.Response;
 
 
 
-public class RandomFragment extends BasicFragment implements Clickable {
+public class RandomFragment extends ButtonSupportedFragment implements Clickable {
 
     private boolean isOnScreen = false;
 

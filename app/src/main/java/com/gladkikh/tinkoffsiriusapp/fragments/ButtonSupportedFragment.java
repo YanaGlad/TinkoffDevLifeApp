@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.fragments;
+package com.gladkikh.tinkoffsiriusapp.fragments;
 
 import android.view.View;
 
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
-public abstract class BasicFragment extends Fragment implements Clickable {
+public abstract class ButtonSupportedFragment extends Fragment implements Clickable {
     protected ExtendedFloatingActionButton btnNex, btnPrev;
     protected View.OnClickListener onNextClickListener, onPrevClickListener;
 

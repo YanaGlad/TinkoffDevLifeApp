@@ -1,15 +1,15 @@
-package com.example.tinkoffsiriusapp.viewmodel;
+package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.tinkoffsiriusapp.api.Api;
-import com.example.tinkoffsiriusapp.api.Instance;
-import com.example.tinkoffsiriusapp.models.GifModel;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
-import com.example.tinkoffsiriusapp.values.PageOperation;
-import com.example.tinkoffsiriusapp.models.Gif;
-import com.example.tinkoffsiriusapp.models.Gifs;
+import com.gladkikh.tinkoffsiriusapp.api.Api;
+import com.gladkikh.tinkoffsiriusapp.api.Instance;
+import com.gladkikh.tinkoffsiriusapp.models.GifModel;
+import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.values.PageOperation;
+import com.gladkikh.tinkoffsiriusapp.models.Gif;
+import com.gladkikh.tinkoffsiriusapp.models.Gifs;
 import java.util.ArrayList;
 import retrofit2.Call;
 import retrofit2.Callback;

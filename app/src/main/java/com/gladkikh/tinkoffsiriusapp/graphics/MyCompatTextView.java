@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.graphics;
+package com.gladkikh.tinkoffsiriusapp.graphics;
 
 import android.content.Context;
 import android.graphics.Color;

@@ -1,17 +1,12 @@
-package com.example.tinkoffsiriusapp;
-
-import android.util.Log;
+package com.gladkikh.tinkoffsiriusapp;
 
 import androidx.annotation.NonNull;
 
-import com.example.tinkoffsiriusapp.api.Api;
-import com.example.tinkoffsiriusapp.api.Instance;
-import com.example.tinkoffsiriusapp.models.Gif;
-import com.example.tinkoffsiriusapp.values.ErrorHandler;
+import com.gladkikh.tinkoffsiriusapp.api.Api;
+import com.gladkikh.tinkoffsiriusapp.api.Instance;
+import com.gladkikh.tinkoffsiriusapp.models.Gif;
 
 import org.junit.Test;
-
-import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;

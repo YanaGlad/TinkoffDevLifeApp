@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.adapters;
+package com.gladkikh.tinkoffsiriusapp.adapters;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,10 +10,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.tinkoffsiriusapp.R;
-import com.example.tinkoffsiriusapp.fragments.BasicFragment;
-import com.example.tinkoffsiriusapp.fragments.MainFragment;
-import com.example.tinkoffsiriusapp.fragments.RandomFragment;
+import com.gladkikh.tinkoffsiriusapp.R;
+import com.gladkikh.tinkoffsiriusapp.fragments.ButtonSupportedFragment;
+import com.gladkikh.tinkoffsiriusapp.fragments.MainFragment;
+import com.gladkikh.tinkoffsiriusapp.fragments.RandomFragment;
 
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -29,7 +29,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
 
 
-    public BasicFragment getCurrentFragment() {
+    public ButtonSupportedFragment getCurrentFragment() {
         if (randomFragment.isOnScreen())
             return randomFragment;
 

@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.models;
+package com.gladkikh.tinkoffsiriusapp.models;
 
 import android.os.Build;
 

@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.graphics;
+package com.gladkikh.tinkoffsiriusapp.graphics;
 
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;

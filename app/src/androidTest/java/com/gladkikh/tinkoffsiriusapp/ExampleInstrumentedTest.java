@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp;
+package com.gladkikh.tinkoffsiriusapp;
 
 import android.content.Context;
 

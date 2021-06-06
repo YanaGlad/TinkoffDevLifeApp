@@ -1,4 +1,4 @@
-package com.example.tinkoffsiriusapp.adapters;
+package com.gladkikh.tinkoffsiriusapp.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.tinkoffsiriusapp.R;
-import com.example.tinkoffsiriusapp.models.GifModel;
-import com.example.tinkoffsiriusapp.viewmodel.GifViewModel;
+import com.gladkikh.tinkoffsiriusapp.R;
+import com.gladkikh.tinkoffsiriusapp.models.GifModel;
+import com.gladkikh.tinkoffsiriusapp.viewmodel.GifViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
