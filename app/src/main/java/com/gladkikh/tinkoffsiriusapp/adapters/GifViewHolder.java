@@ -30,7 +30,7 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
     AppCompatTextView description, author;
     private GifViewModel viewModel;
     private ProgressBar progressBar;
-    private LinearLayoutCompat toolbar;
+    private LinearLayoutCompat linearLayoutCompat;
     private AssetManager assetManager;
     private static ErrorHandler errorHandler = new ErrorHandler();
 
@@ -62,11 +62,11 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
         this.context = context;
         this.assetManager = context.getAssets();
 
-        image = itemView.findViewById(R.id.rnd_image);
-        description = itemView.findViewById(R.id.rnd_description);
-        author = itemView.findViewById(R.id.rnd_author);
-        progressBar = itemView.findViewById(R.id.rnd_progressbar);
-        toolbar = itemView.findViewById(R.id.rnd_toolbar);
+        image = itemView.findViewById(R.id.load_image);
+        description = itemView.findViewById(R.id.load_description);
+        author = itemView.findViewById(R.id.load_author);
+        progressBar = itemView.findViewById(R.id.load_progressbar);
+        linearLayoutCompat = itemView.findViewById(R.id.load_linear_layout);
     }
 
 
@@ -118,7 +118,7 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
                     setupRecycleErrorParams(assetManager);
                 }
             } else {
-                toolbar.setVisibility(View.VISIBLE);
+                linearLayoutCompat.setVisibility(View.VISIBLE);
             }
         });
     }

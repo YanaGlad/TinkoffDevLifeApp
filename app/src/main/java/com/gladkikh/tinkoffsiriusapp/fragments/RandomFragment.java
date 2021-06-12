@@ -119,11 +119,11 @@ public class RandomFragment extends ButtonSupportedFragment implements Clickable
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_random, container, false);
 
-        image = view.findViewById(R.id.rnd_image);
-        toolbar = view.findViewById(R.id.rnd_toolbar);
-        title = view.findViewById(R.id.rnd_description);
-        subtitle = view.findViewById(R.id.rnd_author);
-        ProgressBar loadProgress = view.findViewById(R.id.rnd_progressbar);
+        image = view.findViewById(R.id.load_image);
+        toolbar = view.findViewById(R.id.load_linear_layout);
+        title = view.findViewById(R.id.load_description);
+        subtitle = view.findViewById(R.id.load_author);
+        ProgressBar loadProgress = view.findViewById(R.id.load_progressbar);
 
         btnPrev = requireActivity().findViewById(R.id.btn_previous);
         btnNex = getActivity().findViewById(R.id.btn_next);

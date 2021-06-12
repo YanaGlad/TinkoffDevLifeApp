@@ -23,7 +23,6 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     private MutableLiveData<ErrorHandler> error = new MutableLiveData<>(new ErrorHandler());
     public MutableLiveData<ArrayList<GifModel>> gifModels = new MutableLiveData<>(null);
 
-
     public void setCanLoadNext(boolean canLoadNext) {
         super.setCanLoadNext(canLoadNext);
     }
@@ -54,9 +53,8 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     }
 
     public void setCurrentPage(Integer currentPage, PageOperation pageOperation) {
-        this.currentPage.setValue(currentPage + + pageOperation(pageOperation));
+        this.currentPage.setValue(currentPage + pageOperation(pageOperation));
     }
-
 
     private static int pageOperation(PageOperation pageOperation) {
         switch (pageOperation) {
