@@ -21,49 +21,8 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     private MutableLiveData<String> type = new MutableLiveData<>(null);
     private MutableLiveData<Integer> currentPage = new MutableLiveData<>(0);
     private MutableLiveData<ErrorHandler> error = new MutableLiveData<>(new ErrorHandler());
-    private MutableLiveData<ArrayList<GifModel>> gifModels = new MutableLiveData<>(null);
+    public MutableLiveData<ArrayList<GifModel>> gifModels = new MutableLiveData<>(null);
 
-    private Callback<Gifs> gifsCallback = new Callback<Gifs>() {
-        @Override
-        public void onResponse(@NonNull Call<Gifs> call, Response<Gifs> response) {
-            if (response.isSuccessful()) {
-                setCanLoadNext(true);
-                if (response.body() != null) {
-                    ArrayList<GifModel> result = new ArrayList<>();
-                    for (Gif gif : response.body().getGifs())
-                        result.add(gif.createGifModel());
-                    gifModels.setValue(result);
-                }
-            } else {
-                ErrorHandler errorHandler = new ErrorHandler();
-                errorHandler.setLoadError();
-                setError(errorHandler);
-            }
-        }
-
-        @Override
-        public void onFailure(@NonNull Call<Gifs> call, @NonNull Throwable t) {
-            ErrorHandler errorHandler = new ErrorHandler();
-            errorHandler.setLoadError();
-            setError(errorHandler);
-        }
-    };
-
-
-    public void loadGifs(PageOperation pageOperation, String type) {
-        super.setCanLoadNext(getError().getValue().getCurrentError().equals(ErrorHandler.success()));
-        setCurrentPage(getCurrentPage().getValue(), pageOperation);
-        Api service = Instance.getInstance().create(Api.class);
-
-        switch (type) {
-            case "latest":
-                service.getLatestGifs(getCurrentPage().getValue(), 10, "gif").enqueue(gifsCallback);
-                break;
-            case "top":
-                service.getTopGifs(getCurrentPage().getValue(), 10, "gif").enqueue(gifsCallback);
-                break;
-        }
-    }
 
     public void setCanLoadNext(boolean canLoadNext) {
         super.setCanLoadNext(canLoadNext);

@@ -12,14 +12,14 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.gladkikh.tinkoffsiriusapp.R;
 import com.gladkikh.tinkoffsiriusapp.fragments.ButtonSupportedFragment;
-import com.gladkikh.tinkoffsiriusapp.fragments.MainFragment;
+import com.gladkikh.tinkoffsiriusapp.fragments.RecyclerFragment;
 import com.gladkikh.tinkoffsiriusapp.fragments.RandomFragment;
 
 
 public class MyPagerAdapter extends FragmentPagerAdapter {
 
     private RandomFragment randomFragment;
-    private MainFragment mainFragment1, mainFragment2;
+    private RecyclerFragment recyclerFragment1, recyclerFragment2;
     private Context context;
 
     public MyPagerAdapter(Context context, FragmentManager manager) {
@@ -33,11 +33,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
         if (randomFragment.isOnScreen())
             return randomFragment;
 
-        if (mainFragment1.isOnScreen())
-            return mainFragment1;
+        if (recyclerFragment1.isOnScreen())
+            return recyclerFragment1;
 
-        if (mainFragment2.isOnScreen())
-            return mainFragment2;
+        if (recyclerFragment2.isOnScreen())
+            return recyclerFragment2;
 
         return null;
     }
@@ -50,12 +50,12 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
             randomFragment.setOnScreen(false);
         }
 
-        if (mainFragment1.isOnScreen() && mainFragment1 != object) {
-            mainFragment1.setOnScreen(false);
+        if (recyclerFragment1.isOnScreen() && recyclerFragment1 != object) {
+            recyclerFragment1.setOnScreen(false);
         }
 
-        if (mainFragment2.isOnScreen() && mainFragment2 != object) {
-            mainFragment2.setOnScreen(false);
+        if (recyclerFragment2.isOnScreen() && recyclerFragment2 != object) {
+            recyclerFragment2.setOnScreen(false);
         }
 
         switch (position) {
@@ -63,10 +63,10 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
                 randomFragment.setOnScreen(true);
                 break;
             case 1:
-                mainFragment1.setOnScreen(true);
+                recyclerFragment1.setOnScreen(true);
                 break;
             case 2:
-                mainFragment2.setOnScreen(true);
+                recyclerFragment2.setOnScreen(true);
                 break;
         }
 
@@ -83,11 +83,11 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
                 randomFragment = new RandomFragment();
                 return randomFragment;
             case 1:
-                mainFragment1 = MainFragment.newInstance("latest");
-                return mainFragment1;
+                recyclerFragment1 = RecyclerFragment.newInstance("latest");
+                return recyclerFragment1;
             case 2:
-                mainFragment2 = MainFragment.newInstance("top");
-                return mainFragment2;
+                recyclerFragment2 = RecyclerFragment.newInstance("top");
+                return recyclerFragment2;
 
         }
 

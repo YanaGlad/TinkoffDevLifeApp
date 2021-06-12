@@ -23,17 +23,5 @@ public class PageViewModel extends ViewModel {
         this.canLoadNext.setValue(canLoadNext);
     }
 
-//    public void observeButtons(LifecycleOwner lifecycleOwner,
-//                               boolean isOnScreen, ExtendedFloatingActionButton btnNext,
-//                               ExtendedFloatingActionButton btnPrev){
-//        this.getCanLoadNext().observe(lifecycleOwner, (Boolean enabled) -> {
-//            if (isOnScreen)
-//                btnNext.setEnabled(enabled);
-//        });
-//
-//        this.getCanLoadPrevious().observe(lifecycleOwner, enabled -> {
-//            if (isOnScreen)
-//                btnPrev.setEnabled(enabled);
-//        });
-//    }
 }
+
