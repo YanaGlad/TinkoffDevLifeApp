@@ -4,22 +4,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="415dp"
+    android:layout_gravity="top">
 
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/eight_step"
-        android:layout_marginLeft="@dimen/eight_step"
+        android:layout_height="415dp"
         android:layout_marginTop="@dimen/eight_step"
         android:layout_marginEnd="@dimen/eight_step"
-        android:layout_marginRight="@dimen/eight_step"
         android:layout_marginBottom="@dimen/eight_step"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
@@ -59,8 +57,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:indeterminate="true"
-                    android:theme="@style/Theme.AppCompat.Light"
                     android:paddingBottom="?actionBarSize"
+                    android:theme="@style/Theme.AppCompat.Light"
                     android:visibility="visible" />
 
 

@@ -1,8 +1,10 @@
 package com.gladkikh.tinkoffsiriusapp;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.gladkikh.tinkoffsiriusapp.adapters.MyPagerAdapter;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         myPagerAdapter = new MyPagerAdapter(getApplicationContext(), getSupportFragmentManager());
         tabLayout = findViewById(R.id.tabs);
