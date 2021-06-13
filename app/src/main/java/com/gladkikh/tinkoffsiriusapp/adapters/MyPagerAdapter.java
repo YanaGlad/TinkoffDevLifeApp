@@ -16,6 +16,8 @@ import com.gladkikh.tinkoffsiriusapp.fragments.RecyclerFragment;
 import com.gladkikh.tinkoffsiriusapp.fragments.RandomFragment;
 
 
+@SuppressWarnings("deprecation")
+
 public class MyPagerAdapter extends FragmentPagerAdapter {
 
     private RandomFragment randomFragment;
@@ -26,7 +28,6 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
         super(manager, FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.context = context;
     }
-
 
 
     public ButtonSupportedFragment getCurrentFragment() {

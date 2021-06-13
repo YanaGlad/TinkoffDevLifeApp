@@ -27,6 +27,7 @@ import com.gladkikh.tinkoffsiriusapp.adapters.GifsRecyclerAdapter;
 import com.gladkikh.tinkoffsiriusapp.viewmodel.RecyclerFragmentViewModel;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -80,6 +81,7 @@ public class RecyclerFragment extends ButtonSupportedFragment {
                 recyclerFragmentViewModel.setCanLoadNext(true);
                 if (response.body() != null) {
                     ArrayList<GifModel> result = new ArrayList<>();
+
                     for (Gif gif : response.body().getGifs())
                         result.add(gif.createGifModel());
                     recyclerFragmentViewModel.gifModels.setValue(result);
@@ -129,7 +131,7 @@ public class RecyclerFragment extends ButtonSupportedFragment {
         Button errorButton = view.findViewById(R.id.recycl_error_btn);
 
         btnPrev = requireActivity().findViewById(R.id.btn_previous);
-        btnNex = getActivity().findViewById(R.id.btn_next);
+        btnNex = requireActivity().findViewById(R.id.btn_next);
 
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));

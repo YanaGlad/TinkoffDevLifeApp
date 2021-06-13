@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private ExtendedFloatingActionButton btnNext, btnPrevious;
     private TabLayout tabLayout;
+
     private ViewPager.OnPageChangeListener onPageChangeListener = new ViewPager.OnPageChangeListener() {
 
         @Override
@@ -42,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         myPagerAdapter = new MyPagerAdapter(getApplicationContext(), getSupportFragmentManager());
         tabLayout = findViewById(R.id.tabs);
         viewPager = findViewById(R.id.view_pager);
@@ -58,3 +58,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+

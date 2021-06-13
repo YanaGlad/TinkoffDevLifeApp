@@ -24,7 +24,6 @@
             android:minHeight="128dp"
             app:contentScrim="@android:color/black"
             app:expandedTitleGravity="center"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:titleEnabled="true">
 
 

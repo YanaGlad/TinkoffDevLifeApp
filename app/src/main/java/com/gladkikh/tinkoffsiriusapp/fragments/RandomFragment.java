@@ -1,5 +1,6 @@
 package com.gladkikh.tinkoffsiriusapp.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -46,7 +47,6 @@ public class RandomFragment extends ButtonSupportedFragment {
     public boolean isOnScreen() {
         return isOnScreen;
     }
-
     public void setOnScreen(boolean onScreen) {
         isOnScreen = onScreen;
     }
@@ -115,6 +115,7 @@ public class RandomFragment extends ButtonSupportedFragment {
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_random, container, false);
@@ -124,15 +125,14 @@ public class RandomFragment extends ButtonSupportedFragment {
         title = view.findViewById(R.id.load_description);
         subtitle = view.findViewById(R.id.load_author);
         ProgressBar loadProgress = view.findViewById(R.id.load_progressbar);
+        Button errorButton = view.findViewById(R.id.recycl_error_btn);
+        ProgressBar errorProgressBar = view.findViewById(R.id.recycle_error_progressbar);
 
         btnPrev = requireActivity().findViewById(R.id.btn_previous);
-        btnNex = getActivity().findViewById(R.id.btn_next);
+        btnNex = requireActivity().findViewById(R.id.btn_next);
 
         btnPrev.setOnClickListener(onPrevClickListener);
         btnNex.setOnClickListener(onNextClickListener);
-
-        Button errorButton = view.findViewById(R.id.recycl_error_btn);
-        ProgressBar errorProgressBar = view.findViewById(R.id.recycle_error_progressbar);
 
         title.setText("");
         subtitle.setText("");

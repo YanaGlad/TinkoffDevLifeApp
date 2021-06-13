@@ -18,3 +18,4 @@ public abstract class ButtonSupportedFragment extends Fragment implements Clicka
     }
 
 }
+
