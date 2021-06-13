@@ -39,7 +39,7 @@ import retrofit2.Response;
 
 
 
-public class RandomFragment extends ButtonSupportedFragment implements Clickable {
+public class RandomFragment extends ButtonSupportedFragment {
 
     private boolean isOnScreen = false;
 

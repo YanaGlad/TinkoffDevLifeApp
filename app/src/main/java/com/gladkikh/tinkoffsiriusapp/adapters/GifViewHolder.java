@@ -70,22 +70,18 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
     }
 
 
-    private void prepareForLoading() {
-        if (viewModel != null)
-            viewModel.setIsGifLoaded(false);
-        image.setImageResource(R.color.disabled_btn);
-    }
-
-
     public void setupRecycleErrorParams(AssetManager assetManager) {
         prepareForLoading();
-//            Glide.with(context)
-//                    .load(Support.loadBitmapImage(assetManager, "devnull.png"))
-//                    .into(image);
         progressBar.setVisibility(View.GONE);
         description.setText(R.string.no_internet);
         author.setText(":(");
 
+    }
+
+    private void prepareForLoading() {
+        if (viewModel != null)
+            viewModel.setIsGifLoaded(false);
+        image.setImageResource(R.color.disabled_btn);
     }
 
     public void loadImage(String url) {
@@ -100,9 +96,9 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
                 .into(image);
     }
 
+
     public void setViewModel(GifViewModel viewModel) {
         this.viewModel = viewModel;
-
 
         viewModel.getIsCurrentGifLoaded().observe((LifecycleOwner) context, isLoaded -> {
             if (isLoaded)
@@ -112,14 +108,11 @@ public class GifViewHolder extends RecyclerView.ViewHolder {
         });
 
         viewModel.getError().observe((LifecycleOwner) context, error -> {
-            if (error.getCurrentError().equals(ErrorHandler.success())) {
-                //  toolbar.setVisibility(View.GONE);
-                if (error.getCurrentError().equals(ErrorHandler.imageError())) {
+            if (error.getCurrentError().equals(ErrorHandler.success()))
+                if (error.getCurrentError().equals(ErrorHandler.imageError()))
                     setupRecycleErrorParams(assetManager);
-                }
-            } else {
-                linearLayoutCompat.setVisibility(View.VISIBLE);
-            }
+                else
+                    linearLayoutCompat.setVisibility(View.VISIBLE);
         });
     }
 

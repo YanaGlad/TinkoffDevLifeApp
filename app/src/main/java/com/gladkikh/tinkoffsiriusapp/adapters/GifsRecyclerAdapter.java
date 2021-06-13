@@ -1,6 +1,7 @@
 package com.gladkikh.tinkoffsiriusapp.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -41,7 +42,7 @@ public class GifsRecyclerAdapter extends RecyclerView.Adapter<GifViewHolder> {
     public void onBindViewHolder(@NonNull GifViewHolder holder, int position) {
         GifModel gifModel = gifModels.get(position);
 
-        GifViewModel gifViewModel = new ViewModelProvider((ViewModelStoreOwner) context).get(type + gifModel.getId(), GifViewModel.class);
+        GifViewModel gifViewModel = new ViewModelProvider((ViewModelStoreOwner) context).get(type , GifViewModel.class);
 
         holder.setViewModel(gifViewModel);
         holder.loadImage(gifModel.getGifURL());

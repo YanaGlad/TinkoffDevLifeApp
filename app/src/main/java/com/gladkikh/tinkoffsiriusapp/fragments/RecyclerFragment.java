@@ -33,7 +33,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class RecyclerFragment extends ButtonSupportedFragment implements Clickable {
+public class RecyclerFragment extends ButtonSupportedFragment {
 
     private boolean isOnScreen = false;
     private String type;
@@ -65,13 +65,14 @@ public class RecyclerFragment extends ButtonSupportedFragment implements Clickab
         if (getArguments() != null) {
             type = getArguments().getString("TAB_TYPE");
             recyclerFragmentViewModel.setType(type);
-        }else {
+        } else {
             Log.e("TAG_MAIN_FRAG", "No arguments in bundle");
         }
         Log.d("TYPE", type);
-       loadGifs(PageOperation.STAND, type);
+        loadGifs(PageOperation.STAND, type);
 
     }
+
     private Callback<Gifs> gifsCallback = new Callback<Gifs>() {
         @Override
         public void onResponse(@NonNull Call<Gifs> call, Response<Gifs> response) {
@@ -134,7 +135,7 @@ public class RecyclerFragment extends ButtonSupportedFragment implements Clickab
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
 
         onNextClickListener = v -> loadGifs(PageOperation.NEXT, type);
-        onPrevClickListener = v ->  loadGifs(PageOperation.PREVIOUS, type);
+        onPrevClickListener = v -> loadGifs(PageOperation.PREVIOUS, type);
 
         recyclerFragmentViewModel.getGifModels().observe(getViewLifecycleOwner(), gifs -> {
             if (gifs != null) {
@@ -163,7 +164,7 @@ public class RecyclerFragment extends ButtonSupportedFragment implements Clickab
                     if (errorProgressBar.getVisibility() == View.INVISIBLE) {
                         errorProgressBar.setVisibility(View.VISIBLE);
                         if (e.getCurrentError().equals(ErrorHandler.loadError())) {
-                             loadGifs(PageOperation.STAND, type);
+                            loadGifs(PageOperation.STAND, type);
                         }
                     }
                 });
