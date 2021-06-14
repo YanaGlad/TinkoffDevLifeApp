@@ -23,7 +23,6 @@
             android:layout_height="200dp"
             android:minHeight="128dp"
             app:contentScrim="@android:color/black"
-            app:expandedTitleGravity="center"
             app:titleEnabled="true">
 
 
