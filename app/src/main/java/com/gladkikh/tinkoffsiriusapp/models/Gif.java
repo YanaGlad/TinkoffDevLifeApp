@@ -12,71 +12,54 @@ import java.util.Objects;
 public class Gif {
 
     @SerializedName("id")
-    @Expose
     private Integer id;
 
     @SerializedName("description")
-    @Expose
     private String description;
 
     @SerializedName("votes")
-    @Expose
     private Integer votes;
 
     @SerializedName("author")
-    @Expose
     private String author;
 
     @SerializedName("date")
-    @Expose
     private String date;
 
     @SerializedName("gifURL")
-    @Expose
     private String gifURL;
 
     @SerializedName("gifSize")
-    @Expose
     private Integer gifSize;
 
     @SerializedName("previewURL")
-    @Expose
     private String previewURL;
 
     @SerializedName("videoURL")
-    @Expose
     private String videoURL;
 
     @SerializedName("videoPath")
-    @Expose
     private String videoPath;
 
     @SerializedName("videoSize")
-    @Expose
     private Integer videoSize;
 
     @SerializedName("type")
-    @Expose
     private String type;
 
     @SerializedName("width")
-    @Expose
     private String width;
 
     @SerializedName("height")
-    @Expose
     private String height;
 
     @SerializedName("commentsCount")
-    @Expose
     private Integer commentsCount;
 
     @SerializedName("fileSize")
-    @Expose
     private Integer fileSize;
 
     @SerializedName("canVote")
-    @Expose
     private Boolean canVote;
 
     public GifModel createGifModel() {

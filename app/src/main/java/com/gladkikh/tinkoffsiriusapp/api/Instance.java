@@ -18,9 +18,7 @@ public class Instance {
             OkHttpClient.Builder okHttpBuilder = new OkHttpClient.Builder();
             builder
                     .baseUrl(DOMAIN)
-                    .addConverterFactory(GsonConverterFactory.create(new GsonBuilder()
-                            .excludeFieldsWithoutExposeAnnotation()
-                            .create()))
+                    .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
                     .client(okHttpBuilder.build());
 
         }

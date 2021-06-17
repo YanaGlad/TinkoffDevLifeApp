@@ -102,6 +102,7 @@
         </androidx.cardview.widget.CardView>
     </androidx.core.widget.NestedScrollView>
 
+
     <ProgressBar
         android:id="@+id/recycle_error_progressbar"
         style="?android:attr/progressBarStyleHorizontal"
@@ -109,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/progress_bar_len"
         android:indeterminate="true"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/nestedScrollView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

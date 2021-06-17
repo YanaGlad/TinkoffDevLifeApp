@@ -79,11 +79,13 @@ public class RecyclerFragment extends ButtonSupportedFragment {
         public void onResponse(@NonNull Call<Gifs> call, Response<Gifs> response) {
             if (response.isSuccessful()) {
                 recyclerFragmentViewModel.setCanLoadNext(true);
+
                 if (response.body() != null) {
                     ArrayList<GifModel> result = new ArrayList<>();
 
                     for (Gif gif : response.body().getGifs())
                         result.add(gif.createGifModel());
+
                     recyclerFragmentViewModel.gifModels.setValue(result);
                 }
             } else {

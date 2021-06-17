@@ -49,10 +49,10 @@ public class RandomFragmentViewModel extends PageViewModel {
         return currentGif;
     }
 
-    public void addGifModel(GifModel entry) {
+    public void addGifModel(GifModel gifModel) {
         Log.d("Add", "POS " + pos);
-        currentGif.setValue(entry);
-        gifModels.add(entry);
+        currentGif.setValue(gifModel);
+        gifModels.add(gifModel);
         pos++;
         cachedCurrentGif = gifModels.get(gifModels.size() - 1);
         updateCanLoadPrevious();
