@@ -55,21 +55,9 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     }
 
     public void setCurrentPage(Integer currentPage, PageOperation pageOperation) {
-        this.currentPage.setValue(currentPage + pageOperation(pageOperation));
+        this.currentPage.setValue(currentPage + pageOperation.getPos());
     }
-
-    private static int pageOperation(PageOperation pageOperation) {
-        switch (pageOperation) {
-            case STAND:
-                return 0;
-            case NEXT:
-                return 1;
-            case PREVIOUS:
-                return -1;
-        }
-        return 0;
-    }
-
+ 
     public MutableLiveData<ErrorHandler> getError() {
         return error;
     }
