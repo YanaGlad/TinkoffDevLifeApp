@@ -80,14 +80,9 @@ public class RecyclerFragment extends ButtonSupportedFragment {
             if (response.isSuccessful()) {
                 recyclerFragmentViewModel.setCanLoadNext(true);
 
-                if (response.body() != null) {
-                    ArrayList<GifModel> result = new ArrayList<>();
+                if (response.body() != null) 
+                    recyclerFragmentViewModel.createListOfGifModels(response.body().getGifs());
 
-                    for (Gif gif : response.body().getGifs())
-                        result.add(gif.createGifModel());
-
-                    recyclerFragmentViewModel.gifModels.setValue(result);
-                }
             } else {
                 ErrorHandler errorHandler = new ErrorHandler();
                 errorHandler.setLoadError();

@@ -10,7 +10,9 @@ import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
 import com.gladkikh.tinkoffsiriusapp.values.PageOperation;
 import com.gladkikh.tinkoffsiriusapp.models.Gif;
 import com.gladkikh.tinkoffsiriusapp.models.Gifs;
+
 import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -21,7 +23,7 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     private MutableLiveData<String> type = new MutableLiveData<>(null);
     private MutableLiveData<Integer> currentPage = new MutableLiveData<>(0);
     private MutableLiveData<ErrorHandler> error = new MutableLiveData<>(new ErrorHandler());
-    public MutableLiveData<ArrayList<GifModel>> gifModels = new MutableLiveData<>(null);
+    private MutableLiveData<ArrayList<GifModel>> gifModels = new MutableLiveData<>(null);
 
     public void setCanLoadNext(boolean canLoadNext) {
         super.setCanLoadNext(canLoadNext);
@@ -76,7 +78,20 @@ public class RecyclerFragmentViewModel extends PageViewModel {
         this.error.setValue(error);
     }
 
+    public void createListOfGifModels(ArrayList<Gif> gifs) {
+        ArrayList<GifModel> result = new ArrayList<>();
+
+        for (Gif gif : gifs)
+            result.add(gif.createGifModel());
+
+        setGifModels(result);
+    }
+
     public MutableLiveData<ArrayList<GifModel>> getGifModels() {
         return gifModels;
+    }
+
+    private void setGifModels(ArrayList<GifModel> gifModels) {
+        this.gifModels.setValue(gifModels);
     }
 }
