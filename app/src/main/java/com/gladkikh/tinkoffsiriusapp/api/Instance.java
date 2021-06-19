@@ -16,8 +16,8 @@ public class Instance {
             builder = new Retrofit.Builder();
 
             OkHttpClient.Builder okHttpBuilder = new OkHttpClient.Builder();
-            builder
-                    .baseUrl(DOMAIN)
+
+            builder.baseUrl(DOMAIN)
                     .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create()))
                     .client(okHttpBuilder.build());
 

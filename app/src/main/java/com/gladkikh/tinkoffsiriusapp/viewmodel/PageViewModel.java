@@ -1,5 +1,6 @@
 package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -7,7 +8,7 @@ public class PageViewModel extends ViewModel {
     private MutableLiveData<Boolean> canLoadPrevious = new MutableLiveData<>(false);
     private MutableLiveData<Boolean> canLoadNext = new MutableLiveData<>(false);
 
-    public MutableLiveData<Boolean> getCanLoadPrevious() {
+    public LiveData<Boolean> getCanLoadPrevious() {
         return canLoadPrevious;
     }
 
@@ -15,7 +16,7 @@ public class PageViewModel extends ViewModel {
         this.canLoadPrevious.setValue(canLoadPrevious);
     }
 
-    public MutableLiveData<Boolean> getCanLoadNext() {
+    public LiveData<Boolean> getCanLoadNext() {
         return canLoadNext;
     }
 

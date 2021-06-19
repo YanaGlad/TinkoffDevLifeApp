@@ -1,22 +1,11 @@
 package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
-import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
-
-import com.gladkikh.tinkoffsiriusapp.api.Api;
-import com.gladkikh.tinkoffsiriusapp.api.Instance;
 import com.gladkikh.tinkoffsiriusapp.models.GifModel;
 import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
 import com.gladkikh.tinkoffsiriusapp.values.PageOperation;
 import com.gladkikh.tinkoffsiriusapp.models.Gif;
-import com.gladkikh.tinkoffsiriusapp.models.Gifs;
-
 import java.util.ArrayList;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 
 public class RecyclerFragmentViewModel extends PageViewModel {
 
@@ -57,7 +46,7 @@ public class RecyclerFragmentViewModel extends PageViewModel {
     public void setCurrentPage(Integer currentPage, PageOperation pageOperation) {
         this.currentPage.setValue(currentPage + pageOperation.getPos());
     }
- 
+
     public MutableLiveData<ErrorHandler> getError() {
         return error;
     }

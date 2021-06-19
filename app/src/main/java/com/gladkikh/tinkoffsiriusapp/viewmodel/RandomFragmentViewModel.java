@@ -31,7 +31,7 @@ public class RandomFragmentViewModel extends PageViewModel {
         this.error.setValue(error);
     }
 
-    public MutableLiveData<Boolean> getIsCurrentGifLoaded() {
+    public  LiveData<Boolean> getIsCurrentGifLoaded() {
         return isCurrentGifLoaded;
     }
 

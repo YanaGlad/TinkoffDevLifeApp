@@ -1,7 +1,9 @@
 package com.gladkikh.tinkoffsiriusapp.viewmodel;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
 import com.gladkikh.tinkoffsiriusapp.values.ErrorHandler;
 
 
@@ -10,14 +12,15 @@ public class GifViewModel extends ViewModel {
     private MutableLiveData<Boolean> isCurrentGifLoaded = new MutableLiveData<>(false);
     private MutableLiveData<ErrorHandler> error = new MutableLiveData<>(new ErrorHandler());
 
-    public MutableLiveData<ErrorHandler> getError() {
+    public LiveData<ErrorHandler> getError() {
         return error;
     }
 
     public void setError(ErrorHandler error) {
         this.error.setValue(error);
     }
-    public MutableLiveData<Boolean> getIsCurrentGifLoaded() {
+
+    public LiveData<Boolean> getIsCurrentGifLoaded() {
         return isCurrentGifLoaded;
     }
 
